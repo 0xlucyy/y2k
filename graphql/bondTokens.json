@@ -1,0 +1,23 @@
+{
+	"data": {
+		"bondTokens": [{
+			"id": "0xdd3b7043b65e3586d12e9bde8c7b938236b3556a",
+			"decimals": "18",
+			"network": "arbitrum-one",
+			"chainId": "42161",
+			"symbol": "Y2K-20230923",
+			"expiry": "1695427200",
+			"teller": "0x007fe70dc9797c4198528ae43d8195fff82bdc95",
+			"type": "fixed-expiration",
+			"underlying": {
+				"id": "42161_0x65c936f008bc34fe819bce9fa5afd9dc2d49977f",
+				"network": "arbitrum-one",
+				"chainId": "42161",
+				"address": "0x65c936f008bc34fe819bce9fa5afd9dc2d49977f",
+				"symbol": "Y2K",
+				"name": "Y2K",
+				"typeName": "ERC20"
+			}
+		}]
+	}
+}

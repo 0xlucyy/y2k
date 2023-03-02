@@ -1,0 +1,3 @@
+[console_scripts]
+watch = src.watcher:main
+
