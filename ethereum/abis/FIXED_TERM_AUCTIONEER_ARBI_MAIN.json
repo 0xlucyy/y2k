@@ -68,14 +68,14 @@
 		"name": "Auctioneer_OnlyMarketOwner",
 		"type": "error"
 	}, {
-		"anonymous": false,
+		"anonymous": False,
 		"inputs": [{
-			"indexed": true,
+			"indexed": True,
 			"internalType": "address",
 			"name": "user",
 			"type": "address"
 		}, {
-			"indexed": true,
+			"indexed": True,
 			"internalType": "contract Authority",
 			"name": "newAuthority",
 			"type": "address"
@@ -83,34 +83,34 @@
 		"name": "AuthorityUpdated",
 		"type": "event"
 	}, {
-		"anonymous": false,
+		"anonymous": False,
 		"inputs": [{
-			"indexed": false,
+			"indexed": False,
 			"internalType": "uint32",
 			"name": "defaultTuneInterval",
 			"type": "uint32"
 		}, {
-			"indexed": false,
+			"indexed": False,
 			"internalType": "uint32",
 			"name": "defaultTuneAdjustment",
 			"type": "uint32"
 		}, {
-			"indexed": false,
+			"indexed": False,
 			"internalType": "uint32",
 			"name": "minDebtDecayInterval",
 			"type": "uint32"
 		}, {
-			"indexed": false,
+			"indexed": False,
 			"internalType": "uint32",
 			"name": "minDepositInterval",
 			"type": "uint32"
 		}, {
-			"indexed": false,
+			"indexed": False,
 			"internalType": "uint32",
 			"name": "minMarketDuration",
 			"type": "uint32"
 		}, {
-			"indexed": false,
+			"indexed": False,
 			"internalType": "uint32",
 			"name": "minDebtBuffer",
 			"type": "uint32"
@@ -118,9 +118,9 @@
 		"name": "DefaultsUpdated",
 		"type": "event"
 	}, {
-		"anonymous": false,
+		"anonymous": False,
 		"inputs": [{
-			"indexed": true,
+			"indexed": True,
 			"internalType": "uint256",
 			"name": "id",
 			"type": "uint256"
@@ -128,29 +128,29 @@
 		"name": "MarketClosed",
 		"type": "event"
 	}, {
-		"anonymous": false,
+		"anonymous": False,
 		"inputs": [{
-			"indexed": true,
+			"indexed": True,
 			"internalType": "uint256",
 			"name": "id",
 			"type": "uint256"
 		}, {
-			"indexed": true,
+			"indexed": True,
 			"internalType": "address",
 			"name": "payoutToken",
 			"type": "address"
 		}, {
-			"indexed": true,
+			"indexed": True,
 			"internalType": "address",
 			"name": "quoteToken",
 			"type": "address"
 		}, {
-			"indexed": false,
+			"indexed": False,
 			"internalType": "uint48",
 			"name": "vesting",
 			"type": "uint48"
 		}, {
-			"indexed": false,
+			"indexed": False,
 			"internalType": "uint256",
 			"name": "initialPrice",
 			"type": "uint256"
@@ -158,14 +158,14 @@
 		"name": "MarketCreated",
 		"type": "event"
 	}, {
-		"anonymous": false,
+		"anonymous": False,
 		"inputs": [{
-			"indexed": true,
+			"indexed": True,
 			"internalType": "address",
 			"name": "user",
 			"type": "address"
 		}, {
-			"indexed": true,
+			"indexed": True,
 			"internalType": "address",
 			"name": "newOwner",
 			"type": "address"
@@ -173,19 +173,19 @@
 		"name": "OwnerUpdated",
 		"type": "event"
 	}, {
-		"anonymous": false,
+		"anonymous": False,
 		"inputs": [{
-			"indexed": true,
+			"indexed": True,
 			"internalType": "uint256",
 			"name": "id",
 			"type": "uint256"
 		}, {
-			"indexed": false,
+			"indexed": False,
 			"internalType": "uint256",
 			"name": "oldControlVariable",
 			"type": "uint256"
 		}, {
-			"indexed": false,
+			"indexed": False,
 			"internalType": "uint256",
 			"name": "newControlVariable",
 			"type": "uint256"

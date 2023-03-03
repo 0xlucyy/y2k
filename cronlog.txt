@@ -1,0 +1,24 @@
+
+[2023-03-03 15:17:01.441214]  Gathering bond market data ...
+{'44': {'bond_price': '4.137',
+        'discount': 3.3411214953271156,
+        'max_payout': 1903.7964016439096,
+        'url': 'https://app.bondprotocol.finance/#/market/42161/44',
+        'y2k_price': 4.28},
+ '46': {'bond_price': '4.465',
+        'discount': -4.322429906542041,
+        'max_payout': 1047.5914535836362,
+        'url': 'https://app.bondprotocol.finance/#/market/42161/46',
+        'y2k_price': 4.28}}
+
+[2023-03-03 15:18:01.209726]  Gathering bond market data ...
+{'44': {'bond_price': '4.136',
+        'discount': 3.3644859813084196,
+        'max_payout': 1903.7964016439096,
+        'url': 'https://app.bondprotocol.finance/#/market/42161/44',
+        'y2k_price': 4.28},
+ '46': {'bond_price': '4.464',
+        'discount': -4.299065420560751,
+        'max_payout': 1047.5914535836362,
+        'url': 'https://app.bondprotocol.finance/#/market/42161/46',
+        'y2k_price': 4.28}}

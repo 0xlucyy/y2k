@@ -21,7 +21,7 @@ class CronManager:
         ''' Adds a job to crontable. '''
         cron_job = self.cron.new(command=cmd, comment=comment, user=user)
 
-        import pdb;pdb.set_trace()
+        # import pdb;pdb.set_trace()
 
         if CronManager.validity_check(cron_job) == True:
             cron_job.minute.every(minute)
@@ -83,8 +83,8 @@ class CronManager:
             return True
         return False
 
-# import pdb;pdb.set_trace()
-# cron = CronManager()
-# cron.add_job(cmd=f'{VENV_PATH_EXECUTABLE} {FILE_TARGET} >> {LOG_FILE}', comment='gmail lead watcher', minute=1)
-# job = cron.find_job_by_comment('gmail lead watcher')
+import pdb;pdb.set_trace()
+cron = CronManager()
+cron.add_job(cmd=f'{VENV_PATH_EXECUTABLE} {FILE_TARGET} >> {LOG_FILE}', comment='gmail lead watcher', minute=1)
+job = cron.find_job_by_comment('gmail lead watcher')
 # cron.remove_job(job)
