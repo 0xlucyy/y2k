@@ -49,7 +49,7 @@ MARKETS = '''
   markets(
     where: {
       payoutToken_: {
-        name: "Y2K",
+        name:"_NAME",
         symbol_not: "Dummy"
       },
       isLive: true

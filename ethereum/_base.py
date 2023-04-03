@@ -38,7 +38,7 @@ class Web3_Base():
 
     def get_provider(self):
         provider = _Base.MAINNET_PROVIDER
-        # print(f'Setting provider {provider}')
+        # print(f'[INFO] Setting provider {provider} ...')
         # if app.config['ENV'] == 'live':
         #     provider = app.config["MAINNET_PROVIDER"]
         # else:

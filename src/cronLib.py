@@ -1,4 +1,5 @@
 ''' Trigger this script from cron.sh or source your venv and run'''
+# https://gitlab.com/doctormo/python-crontab/
 from crontab import CronTab
 import os
 # import pdb;pdb.set_trace()
@@ -83,8 +84,9 @@ class CronManager:
             return True
         return False
 
-import pdb;pdb.set_trace()
-cron = CronManager()
-cron.add_job(cmd=f'{VENV_PATH_EXECUTABLE} {FILE_TARGET} >> {LOG_FILE}', comment='gmail lead watcher', minute=1)
-job = cron.find_job_by_comment('gmail lead watcher')
+# import pdb;pdb.set_trace()
+# cron = CronManager()
+# cron.add_job(cmd=f'{VENV_PATH_EXECUTABLE} {FILE_TARGET} >> {LOG_FILE}', comment='bond watcher 1', minute=1)
+# cron.add_job(cmd=f'{VENV_PATH_EXECUTABLE} {FILE_TARGET} >> {LOG_FILE}', comment='bond watcher 2', minute=1)
+# job = cron.find_job_by_comment('bond watcher 1')
 # cron.remove_job(job)
