@@ -46,16 +46,16 @@ class CronManager:
         self.cron.write()
         print(f'Job Removed: {job}')
 
-    def remove_all_jobs(self):
+    def remove_jobs(self):
         self.cron.remove_all()
         self.cron.write()
         print('All Jobs Removed.')
 
-    def show_all_jobs(self):
+    def get_jobs(self):
         ''' Prints all jobs. '''
         print(f"\n\t\t\t\t{'*'*25}ALL JOBS{'*'*25}\n{self.cron.render()}")
 
-    def get_all_jobs(self):
+    def get_cron(self):
         ''' Returns all jobs. '''
         return self.cron
 
