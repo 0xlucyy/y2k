@@ -5,6 +5,7 @@ from src.config import _Base
 CARRIERS = _Base.CARRIERS
 EMAIL = _Base.EMAIL
 PASSWORD = _Base.PASSWORD
+PHONE_NUM = _Base.PHONE_NUM
  
 def send_message(phone_number: str, carrier: str, message: str) -> bool:
   '''
@@ -31,7 +32,7 @@ def send_message(phone_number: str, carrier: str, message: str) -> bool:
     return False
 
 ''' Working test which sends a msg to a phone '''
-# phone_number = '7142228402'
+# phone_number = PHONE_NUM
 # carrier = 'tmobile'
 # message = "Discount is {num}%"
-# send_message(phone_number, carrier, message.format(num=666))
+# send_message(phone_number, carrier, message.format(num=123))

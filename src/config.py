@@ -17,6 +17,7 @@ class _Base(object):
   EMAIL = os.environ.get("EMAIL")
   PASSWORD = os.environ.get("PASSWORD")
   PRIV_KEY_ONE = os.environ.get("PRIV_KEY_ONE")
+  PHONE_NUM = os.environ.get("PHONE_NUM")
 
   BOND_FIXED_TERM_TELLER_ARBI_MAIN = Web3.toChecksumAddress('0x007F7A1cb838A872515c8ebd16bE4b14Ef43a222')
 

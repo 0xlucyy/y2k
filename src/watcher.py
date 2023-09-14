@@ -95,7 +95,7 @@ def bond_protocol_watcher():
 
       if float(bond_metadata[market_id]['discount']) >= 6:
         print(f"[INFO]  Sending text alert ...")
-        send_message('7142228402', 'tmobile', f"Discount is {bond_metadata[market_id]['discount']}%")
+        send_message(_Base.PHONE_NUM, 'tmobile', f"Discount is {bond_metadata[market_id]['discount']}%")
 
       marid = 'MarketId'
       dis = 'Discount'
