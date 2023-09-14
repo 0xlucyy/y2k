@@ -1,8 +1,0 @@
-README.md
-setup.py
-y2k.egg-info/PKG-INFO
-y2k.egg-info/SOURCES.txt
-y2k.egg-info/dependency_links.txt
-y2k.egg-info/entry_points.txt
-y2k.egg-info/requires.txt
-y2k.egg-info/top_level.txt

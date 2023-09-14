@@ -1,3 +1,4 @@
 .env
 venv
 .DS_Store
+y2k.egg-info
