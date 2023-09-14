@@ -1,155 +1,106 @@
+
 '''
-  Returns 
 
   Params:
-  - 
+  - _NAME (str): labelName of a domain, ie .. without .eth part.
 '''
-BOND_TOKENS = '''
-{
-  bondTokens(
-    where: {
-      symbol_starts_with: "Y2K"}, 
-    orderBy: expiry,
-    orderDirection: desc,
-    block: {
-      number_gte: 9380410
-    }
-  ) 
-  {
-    id
-    decimals
-    network
-    chainId
-    symbol
-    expiry
-    teller
-    type
-    underlying{
-      id
-      network
-      chainId
-      address
-      symbol
-      name
-      typeName
-    }
-  }
-}
-'''
-
-
-'''
-  Returns 
-
-  Params:
-  - 
-'''
-MARKETS = '''
+GET_Y2K_MARKETS = '''
 {
   markets(
-    where: {
-      payoutToken_: {
-        name:"_NAME",
-        symbol_not: "Dummy"
-      },
-      isLive: true
+    where:{
+
     }
+    block:{
+      number_gte:33934301
+    }
+    orderBy:tvl
+    orderDirection:desc
   )
   {
     id
-    name
-    network
-    chainId
-    auctioneer
-    teller
-    marketId
-    owner
-    vesting
-    vestingType
-    creationBlockTimestamp
-    capacity
-    quoteToken {
-      id
-      symbol
-      name
-    }
-    payoutToken{
-      id
-      symbol
-      name
-    }
+    isV2
+    premiumVault
+    collateralVault
+    strikePrice
+    depositAsset
+    formattedStrikePrice
+    token
+    marketName
+    marketIndex
+    controller
+    tvl
+    activeUsers
+    protocolFees
+    collateralFees
+    premiumFees
+    collateralTVL
+    premiumTVL
+    paused
   }
 }
 '''
 
 
 '''
-  Returns 
+
 
   Params:
-  - 
+  - _SKIP (int): increments of 100
 '''
-ownerTokenTbvs = '''
+GET_Y2K_USER = '''
 {
-	ownerTokenTbvs(
-    where: {
-      owner:"0x5c84cf4d91dc0acde638363ec804792bb2108258"
-    }
-  )
+users(
+  where:{
+    id:"0x0aae9ae032b04fb8ac1f6265ecd7710f443995c6"
+  }
+  block:{
+    number_gte:33934301
+  }
+  skip:_SKIP
+)
   {
     id
-    owner
-    token
-    network
-    tbv
+		emissions
+    __typename
+    depositAssets{
+      depositAsset
+      collateralTVL
+      collateralProfit
+      premiumTVL
+      premiumProfit
+      tvl
+      tvlV2
+      tvlV1
+      pnl
+      id
+    }
   }
 }
 '''
 
-
-BOND_PURCHASES = '''
+GET_Y2K_USER = '''
 {
-	bondPurchases(
-    where: {
-      payoutToken_: {
-        name: "Y2K",
-        symbol_not: "Dummy"
-      }
-    },
-    orderBy: timestamp,
-    orderDirection: desc
-    
-  ) {
+users(
+  where:{id:"0x0aae9ae032b04fb8ac1f6265ecd7710f443995c6"}
+  block:{
+    number_gte:33934301
+  }
+)
+  {
     id
-    marketId
-    owner
-    amount
-    payout
-    recipient
-    referrer
-    timestamp
-    teller
-    network
-    chainId
-    purchasePrice
-    postPurchasePrice
-    ownerTokenTbv {
+		emissions
+    __typename
+    depositAssets{
+      depositAsset
+      collateralTVL
+      collateralProfit
+      premiumTVL
+      premiumProfit
+      tvl
+      tvlV2
+      tvlV1
+      pnl
       id
-      owner
-      token
-      network
-      chainId
-      tbv
-    }
-    quoteToken {
-      id
-      symbol
-      name
-    }
-    payoutToken{
-      id
-      symbol
-      name
     }
   }
 }

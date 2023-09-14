@@ -1,2 +1,2 @@
 # y2k
-y2k utility
+This project users arbitrum graphql, 

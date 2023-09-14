@@ -5,24 +5,17 @@ from web3 import (
     IPCProvider,
     middleware
 )
-from src.utils.exceptions import (
+from src.exceptions import (
     ProviderMissing,
     ProviderOffline
 )
 from src.config import _Base
-# import pdb; pdb.set_trace()
 
 
 class Web3_Base():
-    # load_dotenv() # load environment from .env.
-
     def __init__(self, name: str = None):
         self.name = name if name else 'session0'
-        # self.context = Box()
-        # self.load_context()
-        # import pdb; pdb.set_trace()
         self.w3 = Web3(self.get_provider())
-        # self.w3.geth.txpool.inspect()
         if self.w3.isConnected() == False:
             raise ProviderOffline('Provider is not online.')
     
@@ -51,19 +44,6 @@ class Web3_Base():
             elif '.ipc' in provider:
                 return IPCProvider(provider)
         raise ProviderMissing('Invalid Provider. Set in settings.py.')
-
-    # def load_context(self):
-    #     print('Loading context...')
-    #     # Add .env variables to context.
-    #     for env_var in os.environ:
-    #         if env_var in settings.ENV_ALLOW_LIST:
-    #             self.context[env_var] = os.getenv(env_var)
-
-    #     # Add settings.py variables to context.
-    #     for key, value in vars(settings).items():
-    #         if key in settings.ENV_ALLOW_LIST:
-    #             self.context[key] = value
-    #     # import pdb; pdb.set_trace()
 
 
 # test = Web3_Base()

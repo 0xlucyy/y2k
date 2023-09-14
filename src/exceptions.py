@@ -1,28 +1,4 @@
 import traceback
-# from flask import jsonify
-# from app import app
-
-# import pdb; pdb.set_trace()
-
-
-# def log_error(error=None):
-#     try:
-#         err_msg = error.msg 
-#     except Exception as e: 
-#         err_msg = error
-
-#     try:
-#         status = error.status_code 
-#     except Exception as e: 
-#         status = 400
-    
-#     return jsonify({
-#         "exception_type": type(error).__name__,
-#         "error_reason": str(err_msg),
-#         "status_code": status,
-#         "traceback": traceback.format_exc(),
-#         'content-type': 'application/json'
-#     })
 
 class Base(Exception):
     def __init__(self, msg, status_code=500, log_msg=None, title=None):

@@ -1,3 +1,4 @@
 [console_scripts]
-watch = src.watcher:main
+bond = src.watcher:bond_protocol_watcher
+y2k = src.watcher:y2k_market_data
 

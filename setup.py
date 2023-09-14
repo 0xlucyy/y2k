@@ -17,13 +17,14 @@ install_dependencies = open_config_file('requirements.txt').read().splitlines()
 setup(
     name='y2k',
     version='0.1.0',
-    author='lucyfer',
+    author='lucyy',
     description='insight into bonds',
     packages=find_packages(),
     install_requires=install_dependencies,
     entry_points={
         'console_scripts': [
-            "watch = src.watcher:main",
+            "y2k = src.watcher:y2k_market_data",
+            "bond = src.watcher:bond_protocol_watcher",
 
         ]
     }
