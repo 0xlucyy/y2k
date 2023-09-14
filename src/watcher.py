@@ -26,12 +26,12 @@ def bond_protocol_watcher():
   w3_obj = Web3_Base()
   markets = []
 
-  abiFile = json.load(open('./ethereum/abis/FIXED_TERM_AUCTIONEER_ARBI_MAIN.json'))
+  abiFile = json.load(open('./ethereum/abis/BOND_FIXED_TERM_TELLER_ARBI_MAIN.json'))
 
   abi = abiFile['abi']
   teller_contract = w3_obj.w3.eth.contract(
       abi=abi,
-      address=configs.FIXED_TERM_AUCTIONEER_ARBI_MAIN,
+      address=configs.BOND_FIXED_TERM_TELLER_ARBI_MAIN,
   )
   
   for _market in MARKETS_TO_SEARCH:
@@ -57,7 +57,7 @@ def bond_protocol_watcher():
     print("[INFO]  " + "Pendle Price".ljust(8, " ") + ": " + str(pendle_price))
   except KeyError as KE:
     print(f"[ERROR] y2k_price: {y2k_price} ...")
-    return 666
+    return 0
   if markets == []:
     print(f"No active bonds")
     return 0

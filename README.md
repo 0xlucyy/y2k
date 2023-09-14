@@ -1,2 +1,4 @@
 # y2k
-This project users arbitrum graphql, 
+Project is directed towards Abritrum project [Y2K](https://y2k-finance.gitbook.io/y2k-finance/) and [BondProtocol](https://docs.bondprotocol.finance/). This application queries [TheGraphQL](https://subgraph.satsuma-prod.com/y2k-finance/v2-prod/playground) for information from contract [BondFixedTermTeller](https://arbiscan.io/address/0x007F7735baF391e207E3aA380bb53c4Bd9a5Fed6). This contract keeps track of the bond discount rates of assets. This application keeps track of Y2K token discounts, by leveraging Gmail 
+
+A cronjob library is used `src/cronLib.py` to add and remove cron jobs. `watcher.py` is the actual cron job, which can be activated to keep track of y2k bond prices. If the discount is ever above n%, a text will be sent to specific phone. Phone text parameters can be changed in `sender.py`
